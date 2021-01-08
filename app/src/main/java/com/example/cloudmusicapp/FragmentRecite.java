@@ -14,9 +14,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-/**
- * Created by Administrator on 2019/4/26.
- */
 
 public class FragmentRecite extends Fragment implements View.OnClickListener{
 
@@ -30,7 +27,7 @@ public class FragmentRecite extends Fragment implements View.OnClickListener{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myDataBase = new MyDataBase(getActivity(),"tb_dict",null,1);
+        myDataBase = new MyDataBase(getActivity(),"Word",null,1);
 
 
         View view = inflater.inflate(R.layout.fragment_recite,null);
@@ -47,7 +44,7 @@ public class FragmentRecite extends Fragment implements View.OnClickListener{
             word = words.get(i).word;
         }
         catch (Exception e){
-            Toast.makeText(getActivity(),"用户名或密码错误，请重试。",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(),"请务必先添加单词！",Toast.LENGTH_SHORT).show();
         }
         tv_word = view.findViewById(R.id.recite_tv_word);
         tv_translate = view.findViewById(R.id.recite_tv_translate);
@@ -70,7 +67,7 @@ public class FragmentRecite extends Fragment implements View.OnClickListener{
         ArrayList<Word> words = new ArrayList<>();
         Cursor cursor = myDataBase.getReadableDatabase().query("Word",null,null,null,null,null,null);
         while(cursor.moveToNext()){
-            Word word = new Word();
+            Word word=new Word();
             //利用getColumnIndex：String 来获取列的下标，再根据下标获取cursor的值
             word.word = cursor.getString(cursor.getColumnIndex("word"));
             word.translate = cursor.getString(cursor.getColumnIndex("translate"));

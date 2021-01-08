@@ -21,7 +21,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:gravity="center"
-            android:text="开始你的单词！"
+            android:text="Start your study！"
             android:textColor="@android:color/background_light"
             android:textSize="30sp" />
 
@@ -35,9 +35,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="欢迎您,"
+            android:text="Welcome,"
             android:textColor="@android:color/background_light"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/name"
@@ -51,10 +51,23 @@
     <FrameLayout
         android:id="@+id/first_fl"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_below="@id/title">
+        android:layout_height="336dp"
+        android:layout_below="@id/title"
+        android:layout_marginTop="38dp"
+        android:background="@null">
 
 
+        <FrameLayout
+            android:id="@+id/first_bg"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_below="@id/title"
+            android:layout_marginTop="38dp"
+            android:alpha="0.5"
+            android:background="#FFFFFF">
+
+
+        </FrameLayout>
     </FrameLayout>
 
     <LinearLayout
@@ -72,6 +85,7 @@
             android:background="@drawable/button"
             android:text="录入"
             android:textColor="@android:color/background_light"
+            android:layout_marginTop="100dp"
             android:textSize="16sp" />
 
         <Button
@@ -81,6 +95,7 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/button"
             android:text="背诵"
+            android:layout_marginTop="100dp"
             android:textColor="@android:color/background_light"
             android:textSize="16sp" />
 
@@ -90,6 +105,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button"
             android:text="个人中心"
+            android:layout_marginTop="100dp"
             android:textColor="@android:color/background_light"
             android:textSize="16sp" />
     </LinearLayout>

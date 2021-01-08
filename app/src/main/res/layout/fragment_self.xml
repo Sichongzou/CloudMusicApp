@@ -25,14 +25,14 @@
         android:background="@null"
         android:id="@+id/self_tv_explain"
         />
+
     <TextView
-        android:paddingTop="10dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/self_tv_version"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="   版本                                                          v 0.1.8"
-        android:textSize="20sp"
+        android:layout_marginTop="20dp"
         android:background="@null"
-        android:id="@+id/self_tv_version"
-        />
+        android:paddingTop="10dp"
+        android:text="   版本                                     v 0.0.1"
+        android:textSize="20sp" />
 </LinearLayout>

@@ -28,21 +28,22 @@ public class WordsBase extends AppCompatActivity {
         myDataBase = new MyDataBase(WordsBase.this,"Word",null,1);
         ArrayList<Word> words = getWords();
         listView = (ListView)findViewById(R.id.list);
-        list = new ArrayList<Map<String, Object>>();
-        for (int i = 0;i < words.size() ;i++) {
-            Map<String, Object> map = new HashMap<>();
+            list = new ArrayList<Map<String, Object>>();
+            for (int i = 0;i < words.size() ;i++) {
+                Map<String, Object> map = new HashMap<>();
             map.put("id",words.get(i).id+".");
             map.put("word", words.get(i).word);
             map.put("translate", words.get(i).translate);
             list.add(map);
         }
+        //简单适配器 适配进入listView
         SimpleAdapter simpleAdapter = new SimpleAdapter(WordsBase.this,list, R.layout.list_item,
                 new String[]{"id","word","translate"},new int[]{R.id.id,R.id.word,R.id.translate});
 
         listView.setAdapter(simpleAdapter);
 
     }
-
+    //查询数据库内容并返回包含数据库内容的ArrayList
     private ArrayList<Word> getWords(){
         ArrayList<Word> words = new ArrayList<>();
         Cursor cursor = myDataBase.getReadableDatabase().query("Word",null,null,null,null,null,null);

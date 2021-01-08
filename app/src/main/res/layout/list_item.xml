@@ -3,32 +3,38 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
         android:text="1."
-        android:textSize="20sp"
-        android:id="@+id/id"/>
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
+
     <TextView
-        android:layout_toRightOf="@+id/id"
+        android:id="@+id/word"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/id"
         android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
         android:text="bird"
-        android:textSize="20sp"
-        android:id="@+id/word"/>
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
+
     <TextView
-        android:gravity="center"
-        android:layout_toRightOf="@+id/word"
-        android:layout_marginLeft="20sp"
+        android:id="@+id/translate"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_marginLeft="20sp"
+        android:layout_toRightOf="@+id/word"
+        android:gravity="center"
         android:text="鸟"
-        android:textSize="20sp"
-        android:id="@+id/translate"/>
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
     <!--    <Button
             android:layout_alignParentRight="true"
             android:layout_width="50dp"

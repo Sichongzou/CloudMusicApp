@@ -23,33 +23,36 @@
         android:id="@+id/recite_tv_translate"/>
 
     <LinearLayout
-        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_height="68dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <Button
-            android:layout_marginRight="20sp"
-            android:layout_width="60dp"
+            android:id="@+id/recite_btn_renshi"
+            android:layout_width="62dp"
             android:layout_height="60dp"
+            android:layout_marginRight="20sp"
             android:background="@null"
-            android:textSize="20sp"
             android:text="认识"
-            android:id="@+id/recite_btn_renshi"/>
+            android:textSize="20sp" />
+
         <Button
-            android:layout_marginRight="20sp"
-            android:layout_width="60dp"
+            android:id="@+id/recite_btn_burenshi"
+            android:layout_width="67dp"
             android:layout_height="60dp"
+            android:layout_marginRight="20sp"
             android:background="@null"
             android:text="不认识"
-            android:id="@+id/recite_btn_burenshi"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
+
         <Button
-            android:layout_width="60dp"
+            android:id="@+id/recite_btn_next"
+            android:layout_width="69dp"
             android:layout_height="60dp"
             android:background="@null"
             android:text="下一个"
-            android:id="@+id/recite_btn_next"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
     </LinearLayout>
 </LinearLayout>

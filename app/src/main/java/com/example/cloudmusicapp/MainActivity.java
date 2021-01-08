@@ -22,14 +22,12 @@ public class MainActivity extends AppCompatActivity {
         button_input = (Button) findViewById(R.id.frist_btn_input);
         button_recite = (Button) findViewById(R.id.frist_btn_recite);
         button_self = (Button) findViewById(R.id.frist_btn_self);
-
         name = (TextView) findViewById(R.id.name);
-
         fragmentInput = new FragmentInput();
         fragmentRecite = new FragmentRecite();
         fragmentSelf = new FragmentSelf();
 
-        myDataBaser = new MyDataBase(MainActivity.this,"tb_dict",null,1);
+        myDataBaser = new MyDataBase(MainActivity.this,"Word",null,1);
 
         //获取ID
         Bundle buddle = getIntent().getExtras();
