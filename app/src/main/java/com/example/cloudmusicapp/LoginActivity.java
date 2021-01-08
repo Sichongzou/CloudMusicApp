@@ -24,6 +24,8 @@ public class LoginActivity extends AppCompatActivity {
                 intent.setClass(this,MainActivity.class);
                 startActivity(intent);
                 Toast.makeText(this,"登陆成功!",Toast.LENGTH_SHORT).show();
+                MyDataBase myDataBase=new MyDataBase(this,"word.db",null,1);
+                myDataBase.getWritableDatabase();
                 return;
             }
         }
