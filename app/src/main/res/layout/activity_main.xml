@@ -1,87 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_frist"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@null">
+    android:background="@drawable/background">
 
     <LinearLayout
-        android:layout_marginTop="30dp"
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:id="@+id/title">
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
         <TextView
-            android:gravity="center"
+            android:id="@+id/first_tv"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="开始你的单词！"
-            android:textSize="30sp"
-            android:id="@+id/first_tv"
-            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="开始你的单词！"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="欢迎您,"
-            android:textSize="16sp"/>
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
+
         <TextView
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="你好"
-            android:textSize="20sp"
-            android:textColor="@color/colorBlack"
-            android:id="@+id/name"/>
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
     </LinearLayout>
+
     <FrameLayout
-        android:layout_below="@id/title"
+        android:id="@+id/first_fl"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:id="@+id/first_fl">
+        android:layout_below="@id/title">
 
 
     </FrameLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/first_fl"
         android:layout_alignParentBottom="true"
         android:gravity="center">
+
         <Button
-            android:layout_marginRight="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="录入"
-            android:textSize="16sp"
-            android:background="@null"
             android:id="@+id/frist_btn_input"
-            />
-        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="背诵"
-            android:textSize="16sp"
-            android:background="@null"
-            android:id="@+id/frist_btn_recite"
-            />
+            android:background="@drawable/button"
+            android:text="录入"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
+
         <Button
+            android:id="@+id/frist_btn_recite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="个人中心"
-            android:textSize="16sp"
-            android:background="@null"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button"
+            android:text="背诵"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
+
+        <Button
             android:id="@+id/frist_btn_self"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="个人中心"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
     </LinearLayout>
 
 </RelativeLayout>
