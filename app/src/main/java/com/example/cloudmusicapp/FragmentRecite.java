@@ -68,7 +68,7 @@ public class FragmentRecite extends Fragment implements View.OnClickListener{
 
     private ArrayList<Word> getWords(){
         ArrayList<Word> words = new ArrayList<>();
-        Cursor cursor = myDataBase.getReadableDatabase().query("tb_dict",null,null,null,null,null,null);
+        Cursor cursor = myDataBase.getReadableDatabase().query("Word",null,null,null,null,null,null);
         while(cursor.moveToNext()){
             Word word = new Word();
             //利用getColumnIndex：String 来获取列的下标，再根据下标获取cursor的值

@@ -25,7 +25,7 @@ public class WordsBase extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_words_base);
 
-        myDataBase = new MyDataBase(WordsBase.this,"tb_dict",null,1);
+        myDataBase = new MyDataBase(WordsBase.this,"Word",null,1);
         ArrayList<Word> words = getWords();
         listView = (ListView)findViewById(R.id.list);
         list = new ArrayList<Map<String, Object>>();
@@ -45,7 +45,7 @@ public class WordsBase extends AppCompatActivity {
 
     private ArrayList<Word> getWords(){
         ArrayList<Word> words = new ArrayList<>();
-        Cursor cursor = myDataBase.getReadableDatabase().query("tb_dict",null,null,null,null,null,null);
+        Cursor cursor = myDataBase.getReadableDatabase().query("Word",null,null,null,null,null,null);
         int i = 1;
         while(cursor.moveToNext()){
             Word word = new Word();

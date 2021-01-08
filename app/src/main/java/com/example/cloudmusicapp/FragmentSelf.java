@@ -1,5 +1,6 @@
 package com.example.cloudmusicapp;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,9 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
 public class FragmentSelf extends Fragment {
+
     TextView textView_wordsbase,textView_explain;
     @Nullable
     @Override

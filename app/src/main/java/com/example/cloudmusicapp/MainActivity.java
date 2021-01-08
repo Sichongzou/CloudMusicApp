@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         button_self.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                getFragmentManager().beginTransaction().replace(R.id.first_fl,fragmentSelf).commitAllowingStateLoss();
             }
         });
 

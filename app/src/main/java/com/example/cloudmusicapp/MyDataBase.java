@@ -27,8 +27,8 @@ public class MyDataBase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("delete from tb_dict");
-        sqLiteDatabase.execSQL("update sqlite_sequence SET seq = 0 where name ='tb_dict'");
+        sqLiteDatabase.execSQL("delete from Word");
+        sqLiteDatabase.execSQL("update sqlite_sequence SET seq = 0 where name ='Word'");
     }
 
 
@@ -37,6 +37,6 @@ public class MyDataBase extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("word",word);
         values.put("translate",translate);
-        sqLiteDatabase.insert("tb_dict",null,values);//保存功能
+        sqLiteDatabase.insert("Word",null,values);//保存功能
     }
 }

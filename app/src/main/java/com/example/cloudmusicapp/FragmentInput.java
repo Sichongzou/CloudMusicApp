@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+
 import com.example.cloudmusicapp.MyDataBase;
 
 
@@ -21,7 +23,7 @@ public class FragmentInput extends Fragment {
     Button button;
     EditText editText_word,editText_translate;
     MyDataBase myDataBase;
-
+    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_input,null);
