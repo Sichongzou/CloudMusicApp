@@ -22,10 +22,12 @@ public class LoginActivity extends AppCompatActivity {
             if(password.getText().toString().equals("123456")){
                 Intent intent=new Intent();
                 intent.setClass(this,MainActivity.class);
+                Bundle bundle = new Bundle();
+                EditText editText=findViewById(R.id.editText_userName);
+                bundle.putString("name",editText.getText().toString());
+                intent.putExtras(bundle);
                 startActivity(intent);
                 Toast.makeText(this,"登陆成功!",Toast.LENGTH_SHORT).show();
-                MyDataBase myDataBase=new MyDataBase(this,"word.db",null,1);
-                myDataBase.getWritableDatabase();
                 return;
             }
         }

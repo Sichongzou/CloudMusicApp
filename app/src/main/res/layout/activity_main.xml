@@ -23,7 +23,6 @@
             android:layout_marginTop="500dp"
             android:layout_weight="1"
             android:background="@null"
-            android:onClick="main_me"
             android:text="我的"
             android:textColor="@android:color/background_light" />
 
@@ -45,7 +44,6 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:background="@null"
-            android:onClick="main_search"
             android:text="搜索"
             android:textColor="@android:color/background_light" />
     </LinearLayout>

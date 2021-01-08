@@ -12,7 +12,7 @@
         android:text="单词库"
         android:textSize="25sp"
         android:gravity="center"
-        android:background="@drawable/icon_my_self"
+        android:background="@null"
         android:id="@+id/self_tv_words"
         />
     <TextView
@@ -22,7 +22,7 @@
         android:text="软件说明"
         android:textSize="25sp"
         android:gravity="center"
-        android:background="@drawable/icon_my_self"
+        android:background="@null"
         android:id="@+id/self_tv_explain"
         />
     <TextView
@@ -32,7 +32,7 @@
         android:layout_height="50dp"
         android:text="   版本                                                          v 0.1.8"
         android:textSize="20sp"
-        android:background="@drawable/icon_my_self"
+        android:background="@null"
         android:id="@+id/self_tv_version"
         />
 </LinearLayout>

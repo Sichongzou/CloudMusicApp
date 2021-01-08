@@ -32,7 +32,7 @@
             android:layout_marginRight="20sp"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@drawable/icon_my_touxiang"
+            android:background="@null"
             android:textSize="20sp"
             android:text="认识"
             android:id="@+id/recite_btn_renshi"/>
@@ -40,14 +40,14 @@
             android:layout_marginRight="20sp"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@drawable/icon_my_touxiang"
+            android:background="@null"
             android:text="不认识"
             android:id="@+id/recite_btn_burenshi"
             android:textSize="20sp"/>
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@drawable/icon_my_touxiang"
+            android:background="@null"
             android:text="下一个"
             android:id="@+id/recite_btn_next"
             android:textSize="20sp"/>

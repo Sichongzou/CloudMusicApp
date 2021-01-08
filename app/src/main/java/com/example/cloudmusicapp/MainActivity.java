@@ -13,14 +13,4 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void main_me(View view){
-        Intent intent=new Intent();
-        intent.setClass(this,MeActivity.class);
-        startActivity(intent);
-    }
-    public void main_search(View view){
-        Intent intent=new Intent();
-        intent.setClass(this,SearchActivity.class);
-        startActivity(intent);
-    }
 }
