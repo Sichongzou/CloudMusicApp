@@ -14,16 +14,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.cloudmusicapp.FanYiApi.TransApi;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.Map;
+import com.example.cloudmusicapp.gsonpackage.RequestResult;
+import com.google.gson.Gson;
 
 
 public class FanyiActivity extends AppCompatActivity {
-    Button button;
+    Button buttonzh,buttonen;
     EditText editText;
     TextView textView;
     private TransApi api;
@@ -37,16 +33,34 @@ public class FanyiActivity extends AppCompatActivity {
             super.handleMessage(msg);
             Bundle data = msg.getData();
             String value = data.getString("query");
-            Log.d("run1", "run: "+value);
-            textView.setText(value);
+            Log.d("TAG", "handleMessage: "+ value);
+            Gson gson=new Gson();
+            RequestResult requestResult=gson.fromJson(value, RequestResult.class);
+            textView.setText(requestResult.trans_result.get(0).dst);
         }
     };
-    Runnable networkTask =new Runnable() {
+    //翻译成中文的线程
+    Runnable tochinese =new Runnable() {
         @Override
-        public void run() { // \u4f60\u597d
+        public void run() {
             String query=editText.getText().toString();
             api=new TransApi(APP_ID,SECURITY_KEY);
             query=api.getTransResult(query,"auto","zh");
+            Message message = new Message();
+            Bundle data = new Bundle();
+            Log.d("run", "run: "+query);
+            data.putString("query",query);
+            message.setData(data);
+            handler.sendMessage(message);
+        }
+    };
+    //翻译成英文的线程
+    Runnable toenglish=new Runnable() {
+        @Override
+        public void run() {
+            String query=editText.getText().toString();
+            api=new TransApi(APP_ID,SECURITY_KEY);
+            query=api.getTransResult(query,"auto","en");
             Message message = new Message();
             Bundle data = new Bundle();
             Log.d("run", "run: "+query);
@@ -60,14 +74,22 @@ public class FanyiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fanyi);
         //初始化
-        button=findViewById(R.id.recite_btn_fanyi);
+        buttonzh=findViewById(R.id.zh_btn_fanyi);
+        buttonen=findViewById(R.id.en_btn_fanyi);
         editText=findViewById(R.id.fanyi_inputText);
         textView=findViewById(R.id.fanyi_outputText);
-        //请求百度APi
-        button.setOnClickListener(new View.OnClickListener() {
+        //请求百度APi翻译成中文
+        buttonzh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Thread(networkTask).start();
+                new Thread(tochinese).start();
+            }
+        });
+        //调用百度API翻译成英文
+        buttonen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new Thread(toenglish).start();
             }
         });
     }
