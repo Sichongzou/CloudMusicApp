@@ -45,12 +45,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="127dp">
+        android:layout_height="128dp">
 
         <Button
             android:id="@+id/fanyi_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_width="118dp"
+            android:layout_height="45dp"
             android:layout_marginEnd="4dp"
             android:layout_marginRight="4dp"
             android:background="@drawable/button"
@@ -60,14 +60,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.792" />
+            app:layout_constraintVertical_bias="0.913" />
 
         <Button
             android:id="@+id/input_btn"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:background="@drawable/button"
-            android:text="录入"
+            android:text="Input"
             android:textColor="@android:color/background_light"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"

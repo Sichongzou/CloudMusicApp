@@ -6,25 +6,24 @@
     android:gravity="center">
 
     <TextView
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="单词库"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:background="@null"
         android:id="@+id/self_tv_words"
-        />
-    <TextView
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="软件说明"
-        android:textSize="25sp"
-        android:gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@null"
+        android:gravity="center"
+        android:text="Word bank"
+        android:textSize="25sp" />
+
+    <TextView
         android:id="@+id/self_tv_explain"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:gravity="center"
+        android:text="About"
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/self_tv_version"
@@ -33,6 +32,6 @@
         android:layout_marginTop="20dp"
         android:background="@null"
         android:paddingTop="10dp"
-        android:text="   版本                                     v 0.0.1"
+        android:text="   Edition                                     v 0.0.1"
         android:textSize="20sp" />
 </LinearLayout>

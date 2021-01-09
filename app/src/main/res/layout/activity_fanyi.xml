@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.01"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
-        android:text=""
-        android:textSize="20sp"
-        android:gravity="center"/>
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/fanyi_outputText"

@@ -31,28 +31,28 @@
 
         <Button
             android:id="@+id/recite_btn_renshi"
-            android:layout_width="62dp"
+            android:layout_width="92dp"
             android:layout_height="60dp"
             android:layout_marginRight="20sp"
             android:background="@null"
-            android:text="认识"
+            android:text="I know"
             android:textSize="20sp" />
 
         <Button
             android:id="@+id/recite_btn_burenshi"
-            android:layout_width="67dp"
+            android:layout_width="92dp"
             android:layout_height="60dp"
             android:layout_marginRight="20sp"
             android:background="@null"
-            android:text="不认识"
+            android:text="I don't know"
             android:textSize="20sp" />
 
         <Button
             android:id="@+id/recite_btn_next"
-            android:layout_width="69dp"
+            android:layout_width="92dp"
             android:layout_height="60dp"
             android:background="@null"
-            android:text="下一个"
+            android:text="Next"
             android:textSize="20sp" />
     </LinearLayout>
 </LinearLayout>

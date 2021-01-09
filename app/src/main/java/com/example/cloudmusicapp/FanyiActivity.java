@@ -1,9 +1,12 @@
 package com.example.cloudmusicapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -69,6 +72,7 @@ public class FanyiActivity extends AppCompatActivity {
             handler.sendMessage(message);
         }
     };
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +82,8 @@ public class FanyiActivity extends AppCompatActivity {
         buttonen=findViewById(R.id.en_btn_fanyi);
         editText=findViewById(R.id.fanyi_inputText);
         textView=findViewById(R.id.fanyi_outputText);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
+        getWindow().setStatusBarColor(Color.TRANSPARENT);
         //请求百度APi翻译成中文
         buttonzh.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,12 +1,16 @@
 package com.example.cloudmusicapp;
 
 import android.database.Cursor;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -20,11 +24,13 @@ public class WordsBase extends AppCompatActivity {
     MyDataBase myDataBase;
     ListView listView;
     List<Map<String,Object>> list;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_words_base);
-
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
+        getWindow().setStatusBarColor(Color.TRANSPARENT);
         myDataBase = new MyDataBase(WordsBase.this,"Word",null,1);
         ArrayList<Word> words = getWords();
         listView = (ListView)findViewById(R.id.list);

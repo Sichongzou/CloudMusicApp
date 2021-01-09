@@ -1,9 +1,13 @@
 package com.example.cloudmusicapp;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -15,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentRecite fragmentRecite;
     FragmentSelf fragmentSelf;
     MyDataBase myDataBaser;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         fragmentInput = new FragmentInput();
         fragmentRecite = new FragmentRecite();
         fragmentSelf = new FragmentSelf();
-
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
+        getWindow().setStatusBarColor(Color.TRANSPARENT);
         myDataBaser = new MyDataBase(MainActivity.this,"Word",null,1);
 
         //获取ID
