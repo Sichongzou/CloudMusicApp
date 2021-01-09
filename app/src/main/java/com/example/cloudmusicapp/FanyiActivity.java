@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.cloudmusicapp.FanYiApi.TransApi;
 import com.example.cloudmusicapp.gsonpackage.RequestResult;
@@ -88,14 +89,22 @@ public class FanyiActivity extends AppCompatActivity {
         buttonzh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Thread(tochinese).start();
+                if(!editText.getText().toString().equals("")) {
+                    new Thread(tochinese).start();
+                }else{
+                    Toast.makeText(FanyiActivity.this,"输入东西再翻译，不要再引发什么奇奇怪怪的BUG了！",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         //调用百度API翻译成英文
         buttonen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Thread(toenglish).start();
+                if(!editText.getText().toString().equals("")) {
+                    new Thread(toenglish).start();
+                }else{
+                    Toast.makeText(FanyiActivity.this,"输入东西再翻译，不要再引发什么奇奇怪怪的BUG了！",Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
