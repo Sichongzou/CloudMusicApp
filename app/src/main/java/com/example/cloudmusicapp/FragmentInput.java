@@ -1,6 +1,7 @@
 package com.example.cloudmusicapp;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.LayoutInflater;
@@ -18,7 +19,7 @@ import com.example.cloudmusicapp.MyDataBase;
 
 
 public class FragmentInput extends Fragment {
-    Button button;
+    Button button,btnFanyi;
     EditText editText_word,editText_translate;
     MyDataBase myDataBase;
     @Nullable
@@ -36,7 +37,7 @@ public class FragmentInput extends Fragment {
         editText_word = view.findViewById(R.id.input_et_words);
         editText_translate = view.findViewById(R.id.input_et_translate);
         button = view.findViewById(R.id.input_btn);
-
+        btnFanyi=view.findViewById(R.id.fanyi_btn);
         //点击录入按钮
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +54,14 @@ public class FragmentInput extends Fragment {
                         editText_word.requestFocus();
                 }
 
+            }
+        });
+        //在线翻译按钮
+        btnFanyi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(),FanyiActivity.class);
+                startActivity(intent);
             }
         });
     }

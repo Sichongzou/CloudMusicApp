@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <EditText
+        android:id="@+id/fanyi_inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/fanyi_outputText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="这里显示翻译"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/recite_btn_fanyi"
+            android:layout_width="234dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button"
+            android:text="电波发送！ヾ(✿ﾟ▽ﾟ)ノ"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>
